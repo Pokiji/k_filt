@@ -1,5 +1,6 @@
 Simualte in 1d a ball in freefall with homemade kalman filter and compare to library(filter py) 
-with gaussin noise added to true postion on the ball to simulate noise/randomness.
+with gaussin noise added to true postion on the ball to simulate noise/randomness, then plot on point
+graph to observer inaccuracy.
 
   resources: 
 
