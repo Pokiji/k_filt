@@ -2,6 +2,7 @@ Simualte in 1d a ball in freefall with homemade kalman filter and compare to lib
 with gaussin noise added to true postion on the ball.
 
 -resources: 
+
   https://kalmanfilter.net/ 
   https://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf 
   https://filterpy.readthedocs.io/en/latest/
