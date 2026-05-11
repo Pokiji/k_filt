@@ -19,12 +19,15 @@ mass = 1.0 #mass of ball in kg
 timeElapsed =0
 
 f = KalmanFilter (dim_x=2, dim_z=1)
+f.x = ball_state
 #sim the stuff twin
 while(pos > ball_final_distance):
     noise = np.random.normal(loc=0.0, scale=1.0, size=1000)
     vel =  vel + g*timeElapsed
     pos = pos + vel*timeElapsed
 
+    f.predict()
+    f.update(pos)
     timeElapsed = timeElapsed+.01
 # postion vs time graph
 
