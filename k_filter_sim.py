@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy as si
 from filterpy.kalman import KalmanFilter
 
 # init the vars
@@ -21,12 +20,12 @@ timeElapsed =0
 
 f = KalmanFilter (dim_x=2, dim_z=1)
 #sim the stuff twin
-while(ball_init_distance > ball_final_distance):
+while(pos > ball_final_distance):
     noise = np.random.normal(loc=0.0, scale=1.0, size=1000)
-    vel =  vel + g*time
-    pos = pos + vel*time
+    vel =  vel + g*timeElapsed
+    pos = pos + vel*timeElapsed
 
-    time = timeElapsed+.01
+    timeElapsed = timeElapsed+.01
 # postion vs time graph
 
 plt.plot(true_pos, marker = 'o')
